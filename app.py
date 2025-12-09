@@ -6,7 +6,17 @@ import pandas as pd
 
 # create sorted lists for binary search to use
 def generate_sorted_list(size=15):
-    random_list = [random.randint(1, 100) for _ in range(int(size))]
+    list_size = int(size)
+    
+    LOWER_BOUND = 1
+    UPPER_BOUND = 200 
+
+    if list_size > (UPPER_BOUND - LOWER_BOUND + 1):
+        raise ValueError("Cannot generate list size with unique numbers in the defined range.")
+    
+    random_list = random.sample(range(LOWER_BOUND, UPPER_BOUND + 1), list_size)
+    
+    # sort list
     return sorted(random_list)
 
 # binary search, code related to steps and explanation can be ignored in understanding the algorithm.
