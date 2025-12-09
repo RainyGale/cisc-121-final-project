@@ -11,7 +11,7 @@ def generate_sorted_list(size=15):
     LOWER_BOUND = 1
     UPPER_BOUND = 200 
 
-    if list_size > (UPPER_BOUND - LOWER_BOUND + 1):
+    if list_size > (UPPER_BOUND - LOWER_BOUND + 1): # this case is unreachable because the user cannot change size, but be aware if you wish to modify the code.
         raise ValueError("Cannot generate list size with unique numbers in the defined range.")
     
     random_list = random.sample(range(LOWER_BOUND, UPPER_BOUND + 1), list_size)
