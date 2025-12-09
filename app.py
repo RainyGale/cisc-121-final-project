@@ -112,7 +112,7 @@ def create_new_list_ui():
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
     gr.Markdown("""
-    #Visualizing Binary Search
+    # Visualizing Binary Search
     Binary search is an efficient algorithm for finding an item from a sorted list of items. 
     It works by continually cutting down a range over which the target could not be.
     """)
@@ -132,8 +132,8 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     # --- Section 2: Search Controls ---
     with gr.Row():
         with gr.Column(scale=1):
-            target_input = gr.Number(label="Target Number", precision=0)
-            search_btn = gr.Button("2. Find Target", variant="secondary")
+            target_input = gr.Number(label="2. Set Target Number", precision=0)
+            search_btn = gr.Button("3. Find Target", variant="secondary")
         
         with gr.Column(scale=3):
             result_output = gr.Markdown("### Ready to search...")
