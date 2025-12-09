@@ -24,5 +24,20 @@ The program is designed to allow the user to generate a random but ordered array
 
 They are then able to press a button and the program outputs the index of the target element, it also displays the decisions (i.e., "target is larger/smaller doing x") and the ranges over which it did each step.
 
+### Testing
+All possible cases were tested (and demonstrated to be handled) to avoid confusion for users:
+
+![Alt text](/project_screenshots/Success.png?raw=true "Success")
+
+![Alt text](/project_screenshots/NotFound.png?raw=true "Not Found")
+
+![Alt text](/project_screenshots/InvalidTarget.png?raw=true "Invalid Target")
+
+![Alt text](/project_screenshots/NoList.png?raw=true "No List")
+
+Here is an example of an execution log that users find in usage of the app:
+
+![Alt text](/project_screenshots/ExecutionLog.png?raw=true "No List")
+
 ### AI Usage
 The implementation was in part coded by Google's Gemini 3 Pro LLM using prompts based on this README.
