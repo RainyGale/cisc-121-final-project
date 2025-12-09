@@ -25,21 +25,25 @@ The program is designed to allow the user to generate a random but ordered array
 They are then able to press a button and the program outputs the index of the target element, it also displays the decisions (i.e., "target is larger/smaller doing x") and the ranges over which it did each step.
 
 ### Testing
-All possible cases were tested (and demonstrated to be handled) to avoid confusion for users:
+- All possible cases were tested (and demonstrated to be handled) to avoid confusion for users:
 
-A valid target in the array:
-![Alt text](/project_screenshots/Success.png?raw=true "Success")
+    - A valid target in the array:
 
-A valid target not in the array:
-![Alt text](/project_screenshots/NotFound.png?raw=true "Not Found")
+    ![Alt text](/project_screenshots/Success.png?raw=true "Success")
 
-An invalid target:
-![Alt text](/project_screenshots/InvalidTarget.png?raw=true "Invalid Target")
+    - A valid target not in the array:
 
-No array:
-![Alt text](/project_screenshots/NoList.png?raw=true "No List")
+    ![Alt text](/project_screenshots/NotFound.png?raw=true "Not Found")
 
-Here is an example of an execution log that users find in usage of the app:
+    - An invalid target:
+
+    ![Alt text](/project_screenshots/InvalidTarget.png?raw=true "Invalid Target")
+
+    - No array:
+
+    ![Alt text](/project_screenshots/NoList.png?raw=true "No List")
+
+- Here is an example of an execution log that users find in usage of the app:
 ![Alt text](/project_screenshots/ExecutionLog.png?raw=true "No List")
 
 ### AI Usage
