@@ -27,16 +27,19 @@ They are then able to press a button and the program outputs the index of the ta
 ### Testing
 All possible cases were tested (and demonstrated to be handled) to avoid confusion for users:
 
+A valid target in the array:
 ![Alt text](/project_screenshots/Success.png?raw=true "Success")
 
+A valid target not in the array:
 ![Alt text](/project_screenshots/NotFound.png?raw=true "Not Found")
 
+An invalid target:
 ![Alt text](/project_screenshots/InvalidTarget.png?raw=true "Invalid Target")
 
+No array:
 ![Alt text](/project_screenshots/NoList.png?raw=true "No List")
 
 Here is an example of an execution log that users find in usage of the app:
-
 ![Alt text](/project_screenshots/ExecutionLog.png?raw=true "No List")
 
 ### AI Usage
