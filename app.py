@@ -105,7 +105,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     gr.Markdown("""
     # Visualizing Binary Search
     Binary search is an efficient algorithm for finding an item from a sorted list of items. 
-    It works by continually cutting down a range over which the target could not be.
+    It works by vutting down a range over which the target could not be at each step.
     """)
 
     # --- State Management (Stores the list in memory) ---
