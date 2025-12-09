@@ -79,6 +79,9 @@ def update_search(target, current_list):
     if not current_list:
         return "Please generate a list first!", pd.DataFrame()
     
+    if target is None:
+        return "Please enter a valid number.", pd.DataFrame()
+
     try:
         target = int(target)
     except ValueError:
