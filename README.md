@@ -7,8 +7,8 @@ The binary search algorithm, given a sorted list and target which can be compare
 - Define a left and right index, at first these will be the start and end of the list.
 - Find the middle index of the left and right (sum and floor divide by 2)
 - Check the value of the element at the middle index and compare it to the target and make a decision
-    - If the target is larger than the middle, move the right index to the index left of the middle
-    - If the target is smaller than the middle, move the left index to the index right of the middle
+    - If the target is larger than the middle, move the left index to the index right of the middle
+    - If the target is smaller than the middle, move the right index to the index left of the middle
     - if the target is the same as the middle then we have found the index as the target, it is at the middle index.
 - Repeat this until the target is found or when the left index is greater than the right index (they cross over eachother, having not found the target)
 
