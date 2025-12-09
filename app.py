@@ -2,75 +2,58 @@ import gradio as gr
 import random
 import pandas as pd
 
-# ==========================================
-# PART 1: CORE ALGORITHMS (The Learning Part)
-# ==========================================
+# ============================ BINARY SEARCH ============================
 
+# create sorted lists for binary search to use
 def generate_sorted_list(size=15):
-    """
-    Generates a random list of integers and sorts them.
-    """
-    # Generate random numbers between 1 and 100
     random_list = [random.randint(1, 100) for _ in range(int(size))]
-    # Sort them (Binary search requires sorted data)
     return sorted(random_list)
 
-def binary_search_logic(sorted_list, target):
-    """
-    Performs binary search and records every step for visualization.
-    """
+# binary search, code related to steps and explanation can be ignored in understanding the algorithm.
+def binary_search(sorted_list, target):
     left = 0
     right = len(sorted_list) - 1
     steps = []
+    # we start the found_index at -1 so we can check to see if it's still that by the end (meaning we didn't find the target)
     found_index = -1
 
     step_count = 1
 
     while left <= right:
-        # Calculate middle index
+        # calculate middle index
         mid = (left + right) // 2
         mid_value = sorted_list[mid]
         
-        # Create a visual representation of the current range being explored
-        # e.g., [ ... 10, 15, 20 ... ]
+        # create a visual representation of the current range being explored
         current_range = sorted_list[left : right + 1]
         range_str = str(current_range)
 
-        # Logic: Compare Target to Middle
         if mid_value == target:
-            action = "Target Found!"
-            explanation = f"The target ({target}) is equal to the middle value ({mid_value})."
-            
+            explanation = f"The target ({target}) is equal to the middle value ({mid_value})."   
             steps.append([step_count, left, right, mid, mid_value, range_str, explanation])
+
             found_index = mid
             break
-        
         elif target < mid_value:
-            action = "Go Left"
+
             explanation = f"Target ({target}) is smaller than {mid_value}. Moving Right Index to {mid - 1}."
             steps.append([step_count, left, right, mid, mid_value, range_str, explanation])
             
-            # Update pointers
             right = mid - 1
-            
         else: # target > mid_value
-            action = "Go Right"
             explanation = f"Target ({target}) is larger than {mid_value}. Moving Left Index to {mid + 1}."
             steps.append([step_count, left, right, mid, mid_value, range_str, explanation])
-            
-            # Update pointers
+    
             left = mid + 1
             
         step_count += 1
 
-    if found_index == -1:
+    if found_index == -1: # we never found it
         steps.append([step_count, left, right, "-", "-", "[]", "Left index crossed Right index. Target not found."])
 
     return found_index, steps
 
-# ==========================================
-# PART 2: GRADIO UI HELPERS (The App Part)
-# ==========================================
+# ============================ GRADIO HELPER FUNCTIONS ============================
 
 def update_search(target, current_list):
     """
@@ -87,7 +70,7 @@ def update_search(target, current_list):
     except ValueError:
         return "Please enter a valid integer target.", pd.DataFrame()
 
-    index, steps_log = binary_search_logic(current_list, target)
+    index, steps_log = binary_search(current_list, target)
     
     # Format the result message
     if index != -1:
@@ -106,9 +89,7 @@ def create_new_list_ui():
     new_list = generate_sorted_list()
     return new_list, f"**Current Sorted List:** {new_list}"
 
-# ==========================================
-# PART 3: GRADIO INTERFACE BUILDER
-# ==========================================
+# ============================ GRADIO UI ============================
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
     gr.Markdown("""
