@@ -66,9 +66,6 @@ def binary_search(sorted_list, target):
 # ============================ GRADIO HELPER FUNCTIONS ============================
 
 def update_search(target, current_list):
-    """
-    Bridge function between the UI inputs and the binary search logic.
-    """
     if not current_list:
         return "Please generate a list first!", pd.DataFrame()
     
@@ -95,7 +92,6 @@ def update_search(target, current_list):
     return result_msg, df
 
 def create_new_list_ui():
-    """Generates a new list and updates the display"""
     new_list = generate_sorted_list()
     return new_list, f"**Current Sorted List:** {new_list}"
 
