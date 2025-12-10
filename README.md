@@ -1,6 +1,9 @@
 # cisc-121-final-project
 
 # Binary Search
+
+<video src="project_screenshots/DemoVideo.mp4" width="320" height="240" controls></video>
+
 I chose to implement binary search as it is a useful model for understanding algorithims; it's not so simple to be closer to pure mathematics (e.g. linear search), but not so hard it's difficult to understand.
 
 The binary search algorithm, given a sorted list and target which can be compared (numbers for example) is performed as follows:
