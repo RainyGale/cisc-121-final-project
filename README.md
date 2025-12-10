@@ -2,7 +2,7 @@
 
 # Binary Search
 
-<video src="project_screenshots/DemoVideo.mp4" width="320" height="240" controls></video>
+https://github.com/user-attachments/assets/15dc7232-e3cc-4b5a-bd8d-90947ff119ff
 
 I chose to implement binary search as it is a useful model for understanding algorithims; it's not so simple to be closer to pure mathematics (e.g. linear search), but not so hard it's difficult to understand.
 
